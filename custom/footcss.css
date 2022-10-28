@@ -1,0 +1,27 @@
+﻿
+body {
+                    background: rgb(2,0,36);
+                    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(7,7,143,1) 54%, rgba(0,212,255,1) 96%);
+}
+
+
+
+.footerlinks {
+    color: #ffffff;
+    text-decoration: none !important;
+}
+
+    .footerlinks:hover {
+        color: #ffd800;
+    }
+
+#footer1 {
+    background: #762b00;
+    
+}
+
+#footer2 {
+    background: #531f00;
+}
+
+

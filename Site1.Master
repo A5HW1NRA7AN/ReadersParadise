@@ -1,0 +1,208 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Demo.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Reader's Paradise- Read More And Make Success</></title>
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+     <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+     <%--bootstrap js--%>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+     <%--custom css--%>
+    <link href="~/custom/footcss.css" rel="stylesheet" />
+
+   
+   
+
+     <link rel="shortcut icon" href="custom/imgs/favicon.svg" type="image/svg+xml">
+    
+  
+     <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+ 
+</head>
+        <form id="form1" runat="server">
+<body style="background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+
+        
+        
+             <div>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29);">
+                    <a class="navbar-brand" href="#">
+                       
+                        <span style="font-size:25px; padding-left:6px;"> <b>Reader's Paradise</b></span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                     <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="homepage.aspx">Home</a>
+                            </li>
+
+                            <li class="nav-item active">
+                               
+                                <asp:LinkButton href="#aus" class="nav-link" runat="server" ><span class="navs">About Us</span></asp:LinkButton>
+                                          
+                            </li>
+
+
+                            
+
+                            <li class="nav-item active">
+                              
+                                <asp:LinkButton ID="LinkButton4" class="nav-link" runat="server" OnClick="LinkButton4_Click"><span class="navs">Contact Us</span></asp:LinkButton>
+                            </li>
+
+                                 <li>
+                                <asp:LinkButton ID="pod" class="nav-link" runat="server" OnClick="pod_Click"><span class="navs">Podcast</span></asp:LinkButton>
+                            </li>
+                            
+
+                        </ul>
+
+                        <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <asp:LinkButton class="btn btn-outline-light" ID="LinkButton5" runat="server" Visible="false" OnClick="LinkButton5_Click" ><span class="navs">View Books</span></asp:LinkButton>
+                                </li>
+                        
+                            <li class="nav-item active" style="padding:5px;">
+                                <asp:LinkButton class="btn btn-outline-light" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click"><span class="navs">User Login</span></asp:LinkButton>
+                            </li>
+                            <li class="nav-item active" style="padding:5px;">
+                                <asp:LinkButton class="btn btn-outline-light" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click"><span class="navs">Sign Up</span></asp:LinkButton>
+                            </li>
+                            <li class="nav-item active">
+                                <asp:LinkButton class="btn btn-outline-light" ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" Visible="False"><span class="navs">Logout</span></asp:LinkButton>
+
+                        </li>
+                     
+         
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Visible="False" OnClick="LinkButton7_Click">Hello user</asp:LinkButton>
+
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </nav>
+            </div>
+
+
+        <!-- Main Content Placeholder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+         <!-- Footer -->
+        <footer>
+            <center>
+                <div id="footer1" class="container-fluid" style="background-color:#F28500;  padding:5px;">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">ADMIN LOGIN</asp:LinkButton>
+                            &nbsp;
+                    <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server" OnClick="LinkButton11_Click" Visible="False">Author Management</asp:LinkButton>
+                            &nbsp;
+                             <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" OnClick="LinkButton12_Click" Visible="False">Publisher Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" OnClick="LinkButton8_Click" Visible="False">Book Inventory</asp:LinkButton>
+                            &nbsp;
+                            <!--<asp:LinkButton class="footerlinks" ID="LinkButton9" runat="server" Visible="False">Book Issuing</asp:LinkButton>-->
+                            &nbsp;
+                             <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server" OnClick="LinkButton10_Click" Visible="False">Member Management</asp:LinkButton>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+            </center>
+            
+            <div id="footer2" class="container-fluid" style="background-color:#343a40;">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #3b5998;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <autton
+        class="btn text-white btn-floating m-1"
+        style="background-color: #55acee;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-twitter"></i
+      ></autton>
+
+      <!-- Google -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #dd4b39;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #ac2bac;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+                        <p style="color:whitesmoke">&copy All right Reversed. <a class="footerlinks" href="#" target="_blank">Reader's Paradise</a></p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </footer>
+        <!-- ./Footer -->
+
+
+
+    </form>
+</body>
+</html>
